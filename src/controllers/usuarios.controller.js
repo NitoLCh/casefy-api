@@ -36,7 +36,7 @@ export const crearUsuario = async (req, res) => {
     } catch (error) {
         return res.status(500).json({message: "Algo salio mal"});
     }
-}
+};
 
 export const actualizarUsuario = async (req, res) => {
     try {

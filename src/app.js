@@ -5,6 +5,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import rutasUsuarios from './routes/usuarios.routes.js'
 import rutasInicio from './routes/index.routes.js'
+import rutasProyectos from './routes/proyectos.routes.js'
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(morgan('combined'));
 //Rutas
 app.use('/api', rutasInicio);
 app.use('/api', rutasUsuarios);
+app.use('/api', rutasProyectos);
 
 app.use((req, res, next) => {
     res.status(404).json({message: "Pagina no encontrada"});
